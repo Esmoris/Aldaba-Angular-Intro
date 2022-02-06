@@ -1,4 +1,16 @@
 {
+  "bookings": [
+    {
+      "id": "1",
+      "trip_id": "space-y-moon-1",
+      "traveller_id": "1",
+      "payment_id": "1",
+      "passengers_count": 1,
+      "includes_food": true,
+      "includes_premium_food": true,
+      "extra_kilos": 0
+    }
+  ],
   "operators": [
     {
       "id": "space-y",
