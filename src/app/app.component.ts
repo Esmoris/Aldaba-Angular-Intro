@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { TRIPS } from "./data/trips";
+import { TRIPS } from "./data/astro_bookings";
 import { Trip } from "./models/trip";
 
 @Component({

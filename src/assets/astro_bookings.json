@@ -4,30 +4,32 @@
       "id": "1",
       "trip_id": "space-y-moon-1",
       "traveller_id": "1",
-      "payment_id": "1",
       "passengers_count": 1,
-      "includes_food": true,
       "includes_premium_food": true,
-      "extra_kilos": 0
+      "extra_kilos": 0,
+      "payment_id": "1",
+      "refund_id": "",
+      "operator_reserve_code": "m-1",
+      "status": "RESERVED"
     }
   ],
   "operators": [
     {
       "id": "space-y",
       "name": "Space Y",
-      "range": "Interplanetary",
+      "range": "INTERPLANETARY",
       "status": "ACTIVE"
     },
     {
       "id": "green-origin",
       "name": "Green Origin",
-      "range": "Planetary",
+      "range": "ORBITAL",
       "status": "ACTIVE"
     },
     {
       "id": "virgin-way",
       "name": "Virgin Way",
-      "range": "Planetary",
+      "range": "ORBITAL",
       "status": "PENDING"
     }
   ],
