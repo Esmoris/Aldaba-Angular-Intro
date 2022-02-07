@@ -4,7 +4,8 @@
   <ul>
     <li *ngFor="let operator of operators"
         [class]="getOperatorClass(operator) ">
-      {{ operator.name }} {{ operator.range }} {{ operator.status }}
+      <span>{{getOperatorIcon(operator)}}</span> {{ operator.name }} {{ operator.range }} {{
+      operator.status }}
     </li>
   </ul>
   <h1>Tenemos {{ trips.length }} vuelos espaciales</h1>
@@ -12,8 +13,18 @@
     <li *ngFor="let trip of trips">
       <span *ngIf="trip.status=='CONFIRMED'"> 🚀 </span>
       <span *ngIf="trip.status=='WAITING'"> ⌛ </span>
-      {{ trip.destination }} {{ trip.startDate | date:'dd-MM-yyyy' }} {{ trip.flightPrice | currency
-      }}
+      <span class="{{getTripClass(trip)}}">{{ trip.destination }} </span>
+      <span>
+        From: {{ trip.startDate | date:'dd-MMM-yyyy' }}
+        To: {{ trip.endDate | date:'dd-MMM-yyyy' }}
+        For: {{ trip.flightPrice | currency:'EUR':'symbol':'3.0' }}
+      </span>
+      <span>
+        Places: {{ trip.places }}
+        <a *ngIf="canReserveBooking(trip)"
+           href=""
+           role="button"> Reserve </a>
+      </span>
     </li>
   </ul>
   <router-outlet></router-outlet>

@@ -1,7 +1,14 @@
 .active {
-  color: blue;
+  color: #a371f7;
 }
 
 .pending {
-  color: gray;
+  color: #d29922;
+}
+.trip_only {
+  color: #58a6ff;
+}
+
+.with_stay {
+  color: #3fb950;
 }
