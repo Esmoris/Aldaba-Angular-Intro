@@ -16,6 +16,7 @@ export class AppComponent {
     console.log(this.trips);
   }
   public getOperatorClass(operator: Operator): string {
-    return operator.status == OperatorStatus.ACTIVE ? "active" : "pending";
+    const active = OperatorStatus[OperatorStatus.ACTIVE];
+    return operator.status.toString() == active ? "active" : "pending";
   }
 }
