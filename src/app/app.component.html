@@ -1,6 +1,22 @@
-<header>Aldaba Angular Intro</header>
+<header> {{ title | uppercase }} </header>
 <main>
-  <h1>See you soon, world!</h1>
+  <h1> Tenemos {{operators.length}} operadores</h1>
+  <ul>
+    <li *ngFor="let operator of operators"
+    [class]= "getOperatorClass(operator) ">
+  {{ operator.name}} {{ operator.range}} {{ operator.status}}
+  </li>
+  </ul>
+  <ul>
+    <li *ngFor="let trip of trips"
+    [class]= "getFlightsClass(trip) ">
+  {{ trip.id}} {{ trip.destination}}  {{ trip.startDate | date:'dd-MM-yyyy'}} {{ trip.kind}}
+
+  <span *ngIf="trip.status=='CONFIRMED'"> ⌛</span>
+  <span *ngIf="trip.status=='WAITING'">🚀 </span>
+  </li>
+  </ul>
+
   <router-outlet></router-outlet>
 </main>
 <footer>
