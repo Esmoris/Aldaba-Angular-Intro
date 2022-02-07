@@ -12,6 +12,10 @@ npm i
 npm start
 ```
 
+## Exercise
+
+Tasks for Astro Bookings: https://github.com/LabsAdemy/Aldaba-Angular-Intro/blob/main/TO_DO.md
+
 ---
 
 ## 🛠 VS Code
@@ -28,8 +32,8 @@ npm start
 
 <footer>
   <h3>By Alberto Basalo</h3>
-  <p align="">
+  <p >
    <a href="https://twitter.com/albertobasalo" target="blank"><img src="https://img.shields.io/twitter/follow/albertobasalo?logo=twitter&style=for-the-badge" alt="albertobasalo" /></a>
-  </p>
-     <a href="https://github.com/albertobasalo" target="blank"><img src="https://img.shields.io/github/followers/albertobasalo?logo=github&label=profile albertobasalo&style=for-the-badge" alt="albertobasalo" /></a>
+  <!-- </p>
+     <a href="https://github.com/albertobasalo" target="blank"><img src="https://img.shields.io/github/followers/albertobasalo?logo=github&label=profile albertobasalo&style=for-the-badge" alt="albertobasalo" /></a> -->
 </footer>
