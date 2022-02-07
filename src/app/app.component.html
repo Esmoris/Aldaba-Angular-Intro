@@ -2,10 +2,18 @@
 <main>
   <h1>Tenemos {{ operators.length }} operadores espaciales</h1>
   <ul>
-
     <li *ngFor="let operator of operators"
         [class]="getOperatorClass(operator) ">
       {{ operator.name }} {{ operator.range }} {{ operator.status }}
+    </li>
+  </ul>
+  <h1>Tenemos {{ trips.length }} vuelos espaciales</h1>
+  <ul>
+    <li *ngFor="let trip of trips">
+      <span *ngIf="trip.status=='CONFIRMED'"> 🚀 </span>
+      <span *ngIf="trip.status=='WAITING'"> ⌛ </span>
+      {{ trip.destination }} {{ trip.startDate | date:'dd-MM-yyyy' }} {{ trip.flightPrice | currency
+      }}
     </li>
   </ul>
   <router-outlet></router-outlet>
