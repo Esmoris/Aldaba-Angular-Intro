@@ -11,3 +11,13 @@
 - [x] Una div para cada viaje mostrando nombre, fechas, plazas disponibles y el importe
 - [x] Distinguir con colores los que sean de ida y vuelta de los que incluyen estancia
 - [x] Si hay plazas disponibles, mostrar un botón para reservar
+
+## 2. Varias páginas y navegador
+
+- [ ] Navegación en la parte superior
+- [ ] Página Home con ruta vacía (/)
+- [ ] Página About (/about)
+- [ ] Página Operator con detalles de un operador (/operators/:id)
+- [ ] Página LogIn (/login)
+- [ ] Página Trip con detalles de un viaje (/trips/:id)
+- [ ] Página Booking con formulario para reservar (/trips/:id/booking)
