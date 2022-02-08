@@ -3,10 +3,10 @@
     {
       "id": "1",
       "trip_id": "space-y-moon-1",
-      "traveller_id": "1",
+      "traveler_id": "1",
       "passengers_count": 1,
-      "includes_premium_food": true,
-      "extra_kilos": 0,
+      "has_premium_foods": true,
+      "extra_luggage_kilos": 0,
       "payment_id": "1",
       "refund_id": "",
       "operator_reserve_code": "m-1",
