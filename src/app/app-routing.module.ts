@@ -17,6 +17,14 @@ const routes: Routes = [
     path: "contact",
     component: ContactComponent,
   },
+  {
+    path: "login",
+    loadChildren: () => import("./login/login.module").then((m) => m.LoginModule),
+  },
+  {
+    path: "logout",
+    loadChildren: () => import("./logout/logout.module").then((m) => m.LogoutModule),
+  },
 ];
 
 @NgModule({
