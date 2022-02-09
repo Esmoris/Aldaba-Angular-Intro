@@ -16,8 +16,9 @@
 
 - [x] Navegación en la parte superior
 - [x] Pie común en la parte inferior
-- [ ] Página Home con ruta vacía (/)
-- [ ] Página About (/about)
+- [x] Página Home con ruta vacía (/)
+- [x] Página About (/about)
+- [x] Página Contact (/contact)
 - [ ] Página Operator con detalles de un operador (/operators/:id)
 - [ ] Página LogIn (/login)
 - [ ] Página Trip con detalles de un viaje (/trips/:id)
