@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@picocss/pico/css/pico.classless.min.css",
+              "./node_modules/@picocss/pico/css/pico.fluid.classless.min.css",
               "src/styles.css"
             ],
             "scripts": []

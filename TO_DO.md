@@ -4,10 +4,20 @@
 
 ## 1. Mostrar un listado de viajes
 
-- [ ] Mostrar una encabezado con el contador de viajes
-- [ ] Una div para cada operador mostrando nombre, rango y estado
-- [ ] Distinguir con colores los que estén activos
-- [ ] Distinguir con iconos el rango de viaje
-- [ ] Una div para cada viaje mostrando nombre, fechas, plazas disponibles y el importe
-- [ ] Distinguir con colores los que sean de ida y vuelta de los que incluyen estancia
-- [ ] Si hay plazas disponibles, mostrar un botón para reservar
+- [x] Mostrar una encabezado con el contador de viajes
+- [x] Una li para cada operador mostrando nombre, rango y estado
+- [x] Distinguir con colores los que estén activos
+- [x] Distinguir con iconos el rango de viaje
+- [x] Una div para cada viaje mostrando nombre, fechas, plazas disponibles y el importe
+- [x] Distinguir con colores los que sean de ida y vuelta de los que incluyen estancia
+- [x] Si hay plazas disponibles, mostrar un botón para reservar
+
+## 2. Varias páginas y navegador
+
+- [ ] Navegación en la parte superior
+- [ ] Página Home con ruta vacía (/)
+- [ ] Página About (/about)
+- [ ] Página Operator con detalles de un operador (/operators/:id)
+- [ ] Página LogIn (/login)
+- [ ] Página Trip con detalles de un viaje (/trips/:id)
+- [ ] Página Booking con formulario para reservar (/trips/:id/booking)

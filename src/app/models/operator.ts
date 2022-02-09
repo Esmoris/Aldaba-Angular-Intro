@@ -7,8 +7,8 @@ export enum OperatorStatus {
   PENDING,
 }
 export class Operator {
-  id: string;
-  name: string;
-  range: OperatorRanges;
-  status: OperatorStatus;
+  public id: string;
+  public name: string;
+  public range: OperatorRanges;
+  public status: OperatorStatus;
 }

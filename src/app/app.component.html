@@ -1,27 +1,38 @@
-<header> {{ title | uppercase }} </header>
+<header>{{ title | uppercase }}</header>
 <main>
-  <h1> Tenemos {{operators.length}} operadores</h1>
+  <h1>Tenemos {{ operators.length }} operadores espaciales</h1>
   <ul>
     <li *ngFor="let operator of operators"
-    [class]= "getOperatorClass(operator) ">
-  {{ operator.name}} {{ operator.range}} {{ operator.status}}
-  </li>
+        [class]="getOperatorClass(operator) ">
+      <span>{{getOperatorIcon(operator)}}</span> {{ operator.name }} {{ operator.range }} {{
+      operator.status }}
+    </li>
   </ul>
+  <h1>Tenemos {{ trips.length }} vuelos espaciales</h1>
   <ul>
-    <li *ngFor="let trip of trips"
-    [class]= "getFlightsClass(trip) ">
-  {{ trip.id}} {{ trip.destination}}  {{ trip.startDate | date:'dd-MM-yyyy'}} {{ trip.kind}}
-
-  <span *ngIf="trip.status=='CONFIRMED'"> ⌛</span>
-  <span *ngIf="trip.status=='WAITING'">🚀 </span>
-  </li>
+    <li *ngFor="let trip of trips">
+      <span *ngIf="trip.status=='CONFIRMED'"> 🚀 </span>
+      <span *ngIf="trip.status=='WAITING'"> ⌛ </span>
+      <span class="{{getTripClass(trip)}}">{{ trip.destination }} </span>
+      <span>
+        From: {{ trip.startDate | date:'dd-MMM-yyyy' }}
+        To: {{ trip.endDate | date:'dd-MMM-yyyy' }}
+        For: {{ trip.flightPrice | currency:'EUR':'symbol':'3.0' }}
+      </span>
+      <span>
+        Places: {{ trip.places }}
+        <a *ngIf="canReserveBooking(trip)"
+           href=""
+           role="button"> Reserve </a>
+      </span>
+    </li>
   </ul>
-
   <router-outlet></router-outlet>
 </main>
 <footer>
   <i>
-    Developed for training by <a href="https://twitter.com/albertobasalo"
+    <a href="https://github.com/LabsAdemy/Aldaba-Angular-Intro">Code</a> developed for training by
+    <a href="https://twitter.com/albertobasalo"
        target="_blank">Alberto Basalo</a>
   </i>
 </footer>

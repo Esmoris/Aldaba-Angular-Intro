@@ -1,15 +1,14 @@
-.active{
-  color: blue;
+.active {
+  color: #a371f7;
 }
 
-.pending{
-  color: red;
+.pending {
+  color: #d29922;
+}
+.trip_only {
+  color: #58a6ff;
 }
 
-.idaVuelta{
-  color: green;
-}
-
-.conEstancia{
-  color: blue;
+.with_stay {
+  color: #3fb950;
 }
