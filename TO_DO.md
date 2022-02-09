@@ -14,7 +14,8 @@
 
 ## 2. Varias páginas y navegador
 
-- [ ] Navegación en la parte superior
+- [x] Navegación en la parte superior
+- [x] Pie común en la parte inferior
 - [ ] Página Home con ruta vacía (/)
 - [ ] Página About (/about)
 - [ ] Página Operator con detalles de un operador (/operators/:id)
