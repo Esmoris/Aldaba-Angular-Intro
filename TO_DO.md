@@ -22,7 +22,7 @@
 - [x] Página LogIn (/login)
 - [x] Página LogOut (/logout)
 - [x] Página Bookings (/bookings)
-- [ ] Página Operators (/operators)
+- [x] Página Operators (/operators)
 - [ ] Página Operator con detalles de un operador (/operators/:id)
 - [ ] Página Trip con detalles de un viaje (/trips/:id)
 - [ ] Página Booking con formulario para reservar (/trips/:id/booking)
