@@ -4,7 +4,9 @@
   <li *ngFor="let trip of trips">
     <span *ngIf="trip.status=='CONFIRMED'"> 🚀 </span>
     <span *ngIf="trip.status=='WAITING'"> ⌛ </span>
-    <span class="{{ getTripClass(trip) }}">{{ trip.destination }} </span>
+    <span class="{{ getTripClass(trip) }}">
+      <a [routerLink]="['trips',trip.id]"> {{ trip.destination }} </a>
+    </span>
     <span>
       From: {{ trip.startDate | date:'dd-MMM-yyyy' }}
       To: {{ trip.endDate | date:'dd-MMM-yyyy' }}

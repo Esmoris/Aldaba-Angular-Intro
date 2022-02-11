@@ -33,6 +33,10 @@ const routes: Routes = [
     path: "operators",
     loadChildren: () => import("./operators/operators.module").then((m) => m.OperatorsModule),
   },
+  {
+    path: "trips/:id",
+    loadChildren: () => import("./trips/view-trip/view-trip.module").then((m) => m.ViewTripModule),
+  },
 ];
 
 @NgModule({
