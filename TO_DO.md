@@ -23,8 +23,8 @@
 - [x] Página LogOut (/logout)
 - [x] Página Bookings (/bookings)
 - [x] Página Operators (/operators)
-- [ ] Página Operator con detalles de un operador (/operators/:id)
-- [ ] Página Trip con detalles de un viaje (/trips/:id)
+- [x] Página Operator con detalles de un operador (/operators/:id)
+- [x] Página Trip con detalles de un viaje (/trips/:id)
 - [ ] Página Booking con formulario para reservar (/trips/:id/booking)
 
 ## 3. Formularios
