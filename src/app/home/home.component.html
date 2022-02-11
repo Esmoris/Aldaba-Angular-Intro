@@ -1,12 +1,5 @@
-<h1>Tenemos {{ operators.length }} operadores espaciales</h1>
-<ul>
-  <li *ngFor="let operator of operators"
-      [class]="getOperatorClass(operator) ">
-    <span>{{ getOperatorIcon(operator) }}</span> {{ operator.name }} {{ operator.range }} {{
-    operator.status }}
-  </li>
-</ul>
-<h1>Tenemos {{ trips.length }} vuelos espaciales</h1>
+<h1>Bienvenido a Aldaba Astro Bookings</h1>
+<h2>Tenemos {{ trips.length }} vuelos espaciales</h2>
 <ul>
   <li *ngFor="let trip of trips">
     <span *ngIf="trip.status=='CONFIRMED'"> 🚀 </span>
@@ -25,3 +18,6 @@
     </span>
   </li>
 </ul>
+<h3>
+  <a routerLink="operators">👉 Conoce mejor a nuestros operadores</a>
+</h3>

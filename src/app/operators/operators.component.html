@@ -1,0 +1,8 @@
+<h1>Tenemos {{ operators.length }} operadores espaciales</h1>
+<ul>
+  <li *ngFor="let operator of operators"
+      [class]="getOperatorClass(operator) ">
+    <span>{{ getOperatorIcon(operator) }}</span> {{ operator.name }} {{ operator.range }} {{
+    operator.status }}
+  </li>
+</ul>
