@@ -5,14 +5,17 @@
     <label for="email"><small *ngIf="form.controls['email'].invalid">*</small> Email </label>
     <input type="email"
            name="email"
-           formControlName="email">
+           formControlName="email"
+           [attr.aria-invalid]="form.controls['email'].invalid">
     <small *ngIf="form.controls['email'].touched &&  form.controls['email'].invalid">error</small>
   </div>
   <div>
-    <label for="password"> Password </label>
+    <label for="password"> <small *ngIf="form.controls['password'].invalid">*</small> Password
+    </label>
     <input type="password"
            name="password"
-           formControlName="password">
+           formControlName="password"
+           [attr.aria-invalid]="form.controls['password'].invalid">
     <small *ngIf="form.controls['password'].invalid">* error</small>
   </div>
 
