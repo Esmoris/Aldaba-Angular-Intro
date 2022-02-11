@@ -2,18 +2,23 @@
 
 <form [formGroup]="form">
   <div>
-    <label for="email"> Email </label>
+    <label for="email"> <small *ngIf="form.controls['email'].invalid">*</small> Email </label>
     <input type="email"
            name="email"
-           formControlName="email">
+           formControlName="email"
+           [attr.aria-invalid]="form.controls['email'].invalid">
+    <small *ngIf="form.controls['email'].touched &&  form.controls['email'].invalid">error</small>
   </div>
   <div>
-    <label for="message"> Mensaje </label>
-    <input type="text"
-           name="message"
-           formControlName="message">
+    <label for="message"> <small *ngIf="form.controls['message'].invalid">*</small> Mensaje </label>
+    <textarea name="message"
+              formControlName="message"
+              [attr.aria-invalid]="form.controls['message'].invalid"></textarea>
+    <small
+           *ngIf="form.controls['message'].touched &&  form.controls['message'].invalid">error</small>
   </div>
 
   <button type="submit"
-          (click)="onSubmitClick()"> Enviar </button>
+          (click)="onSubmitClick()"
+          [disabled]="form.invalid"> Enviar </button>
 </form>
