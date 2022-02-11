@@ -26,3 +26,10 @@
 - [ ] Página Operator con detalles de un operador (/operators/:id)
 - [ ] Página Trip con detalles de un viaje (/trips/:id)
 - [ ] Página Booking con formulario para reservar (/trips/:id/booking)
+
+## 3. Formularios
+
+- [ ] Formulario de login
+- [ ] Formulario de contacto
+- [ ] Formulario de alta de reserva básico
+- [ ] Formulario de alta de reserva con extras
