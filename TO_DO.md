@@ -19,7 +19,17 @@
 - [x] Página Home con ruta vacía (/)
 - [x] Página About (/about)
 - [x] Página Contact (/contact)
+- [x] Página LogIn (/login)
+- [x] Página LogOut (/logout)
+- [x] Página Bookings (/bookings)
+- [ ] Página Operators (/operators)
 - [ ] Página Operator con detalles de un operador (/operators/:id)
-- [ ] Página LogIn (/login)
 - [ ] Página Trip con detalles de un viaje (/trips/:id)
 - [ ] Página Booking con formulario para reservar (/trips/:id/booking)
+
+## 3. Formularios
+
+- [ ] Formulario de login
+- [ ] Formulario de contacto
+- [ ] Formulario de alta de reserva básico
+- [ ] Formulario de alta de reserva con extras
