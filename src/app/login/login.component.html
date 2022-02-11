@@ -2,11 +2,11 @@
 
 <form [formGroup]="form">
   <div>
-    <label for="email"> Email </label>
+    <label for="email"><small *ngIf="form.controls['email'].invalid">*</small> Email </label>
     <input type="email"
            name="email"
            formControlName="email">
-    <small *ngIf="form.controls['email'].invalid">* error</small>
+    <small *ngIf="form.controls['email'].touched &&  form.controls['email'].invalid">error</small>
   </div>
   <div>
     <label for="password"> Password </label>
