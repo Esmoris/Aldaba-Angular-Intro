@@ -29,7 +29,7 @@
 
 ## 3. Formularios
 
-- [ ] Formulario de login
+- [x] Formulario de login
 - [ ] Formulario de contacto
 - [ ] Formulario de alta de reserva básico
 - [ ] Formulario de alta de reserva con extras
