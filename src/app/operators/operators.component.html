@@ -2,7 +2,12 @@
 <ul>
   <li *ngFor="let operator of operators"
       [class]="getOperatorClass(operator) ">
-    <span>{{ getOperatorIcon(operator) }}</span> {{ operator.name }} {{ operator.range }} {{
-    operator.status }}
+
+    <span>{{ getOperatorIcon(operator) }}</span>
+    <a [routerLink]="operator.id"> {{ operator.name }} </a>
+    {{ operator.range }}
+    {{ operator.status }}
+
   </li>
 </ul>
+<h4><a routerLink="new">Nuevo operador</a></h4>
