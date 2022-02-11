@@ -1,1 +1,19 @@
-<p>contact works!</p>
+<h3> Contacta con nosotros </h3>
+
+<form [formGroup]="form">
+  <div>
+    <label for="email"> Email </label>
+    <input type="email"
+           name="email"
+           formControlName="email">
+  </div>
+  <div>
+    <label for="message"> Mensaje </label>
+    <input type="text"
+           name="message"
+           formControlName="message">
+  </div>
+
+  <button type="submit"
+          (click)="onSubmitClick()"> Enviar </button>
+</form>
