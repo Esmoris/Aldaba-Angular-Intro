@@ -43,10 +43,10 @@ export class ContactComponent implements OnInit {
       msg += control.errors.required ? "El campo es requerido " : " ";
       msg += control.errors.email ? "El campo debe ser un email " : " ";
       msg += control.errors.minlength
-        ? `El campo debe tener al menos ${control.errors.minLength.requiredLength} caracteres `
+        ? `El campo debe tener al menos ${control.errors.minlength.requiredLength} caracteres `
         : " ";
       return msg;
     }
     return "";
   }
-} // {"minlength":{"requiredLength":10,"actualLength":3}}
+}

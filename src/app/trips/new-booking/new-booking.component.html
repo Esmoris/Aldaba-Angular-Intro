@@ -1,1 +1,24 @@
-<p>new-booking works!</p>
+<h3>Rellena tu solicitud de reserva </h3>
+
+<form [formGroup]="form">
+  <div>
+    <label for="tripId"> <small *ngIf="hasError('tripId')">*</small> Trip Id </label>
+    <input readonly
+           type="string"
+           name="tripId"
+           formControlName="tripId"
+           [attr.aria-invalid]="hasError('tripId')">
+    <small *ngIf="hasErrorMessage('tripId')">{{ getError('tripId') }}</small>
+  </div>
+  <div>
+    <label for="travelerId"> <small *ngIf="hasError('travelerId')">*</small> Traveler email </label>
+    <input type="email"
+           name="travelerId"
+           formControlName="travelerId"
+           [attr.aria-invalid]="hasError('travelerId')">
+    <small *ngIf="hasErrorMessage('travelerId')">{{ getError('travelerId') }}</small>
+  </div>
+  <button type="submit"
+          (click)="onSubmitClick()"
+          [disabled]="form.invalid"> Enviar </button>
+</form>

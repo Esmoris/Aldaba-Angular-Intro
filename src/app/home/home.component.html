@@ -15,7 +15,7 @@
     <span>
       Places: {{ trip.places }}
       <a *ngIf="canReserveBooking(trip)"
-         href=""
+         [routerLink]="['trips',trip.id,'booking']"
          role="button"> Reserve </a>
     </span>
   </li>
