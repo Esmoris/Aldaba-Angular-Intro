@@ -34,3 +34,10 @@
 - [ ] Validaciones
 - [ ] Formulario de alta de reserva básico
 - [ ] Formulario de alta de reserva con extras
+
+## 4. Servicios
+
+- [ ] Crear un servicio para los operadores
+- [ ] Crear un servicio para los viajes
+- [ ] Crear un servicio para las reservas
+- [ ] Actualizar las plazas disponibles de los viajes
