@@ -40,10 +40,25 @@
     <small *ngIf="hasError('status')">{{ getError('status') }}</small>
   </div>
   <div>
-    <label for="hasPremiumFoods"> Include premium foods ? </label>
+    <label for="hasPremiumFoods"> ¿Quieres comida premium? </label>
     <input type="checkbox"
            name="hasPremiumFoods"
            formControlName="hasPremiumFoods">
+  </div>
+  <div>
+    <label for="paymentId"> Escoge tu forma de pago </label>
+    <label>
+      <input type="radio"
+             value="creditCard"
+             formControlName="paymentId">
+      <span>Credit Card</span>
+    </label>
+    <label>
+      <input type="radio"
+             value="payPal"
+             formControlName="paymentId">
+      <span>PayPal</span>
+    </label>
   </div>
   <button type="submit"
           (click)="onSubmitClick()"
