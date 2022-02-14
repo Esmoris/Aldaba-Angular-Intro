@@ -1,1 +1,66 @@
-<p>new-booking works!</p>
+<h3>Rellena tu solicitud de reserva </h3>
+
+<form [formGroup]="form">
+  <div>
+    <label for="tripId"> <small *ngIf="hasError('tripId')">*</small> Trip Id </label>
+    <input readonly
+           type="string"
+           name="tripId"
+           formControlName="tripId"
+           [attr.aria-invalid]="hasError('tripId')">
+    <small *ngIf="hasErrorMessage('tripId')">{{ getError('tripId') }}</small>
+  </div>
+  <div>
+    <label for="travelerId"> <small *ngIf="hasError('travelerId')">*</small> Traveler email </label>
+    <input type="email"
+           name="travelerId"
+           formControlName="travelerId"
+           [attr.aria-invalid]="hasError('travelerId')">
+    <small *ngIf="hasErrorMessage('travelerId')">{{ getError('travelerId') }}</small>
+  </div>
+  <div>
+    <label for="passengersCount"> <small *ngIf="hasError('passengersCount')">*</small> Number of
+      passengers </label>
+    <input type="number"
+           name="passengersCount"
+           formControlName="passengersCount"
+           [attr.aria-invalid]="hasError('passengersCount')">
+    <small *ngIf="hasError('passengersCount')">{{ getError('passengersCount') }}</small>
+  </div>
+  <div>
+    <label for="status"> <small *ngIf="hasError('status')">*</small> Estado de la reserva </label>
+    <select type="number"
+            name="status"
+            formControlName="status"
+            [attr.aria-invalid]="hasError('status')">
+      <option *ngFor="let key of bookingStatusKeys"
+              [value]="key"
+              [label]="bookingStatus[key]"></option>
+    </select>
+    <small *ngIf="hasError('status')">{{ getError('status') }}</small>
+  </div>
+  <div>
+    <label for="hasPremiumFoods"> ¿Quieres comida premium? </label>
+    <input type="checkbox"
+           name="hasPremiumFoods"
+           formControlName="hasPremiumFoods">
+  </div>
+  <div>
+    <label for="paymentId"> Escoge tu forma de pago </label>
+    <label>
+      <input type="radio"
+             value="creditCard"
+             formControlName="paymentId">
+      <span>Credit Card</span>
+    </label>
+    <label>
+      <input type="radio"
+             value="payPal"
+             formControlName="paymentId">
+      <span>PayPal</span>
+    </label>
+  </div>
+  <button type="submit"
+          (click)="onSubmitClick()"
+          [disabled]="form.invalid"> Enviar </button>
+</form>
