@@ -18,6 +18,15 @@
            [attr.aria-invalid]="hasError('travelerId')">
     <small *ngIf="hasErrorMessage('travelerId')">{{ getError('travelerId') }}</small>
   </div>
+  <div>
+    <label for="passengersCount"> <small *ngIf="hasError('passengersCount')">*</small> Number of
+      passengers </label>
+    <input type="number"
+           name="passengersCount"
+           formControlName="passengersCount"
+           [attr.aria-invalid]="hasError('passengersCount')">
+    <small *ngIf="hasError('passengersCount')">{{ getError('passengersCount') }}</small>
+  </div>
   <button type="submit"
           (click)="onSubmitClick()"
           [disabled]="form.invalid"> Enviar </button>

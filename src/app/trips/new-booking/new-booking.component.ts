@@ -15,6 +15,7 @@ export class NewBookingComponent implements OnInit {
     this.form = formBuilder.group({
       tripId: new FormControl(tripId, Validators.required),
       travelerId: new FormControl("", [Validators.required, Validators.email]),
+      passengersCount: new FormControl(1, [Validators.required, Validators.min(1), Validators.max(6)]),
     });
   }
 
@@ -33,12 +34,14 @@ export class NewBookingComponent implements OnInit {
   public getError(controlName: string): string {
     const control = this.form.get(controlName);
     if (control.touched && control.invalid) {
+      const errors = control.errors;
       let msg = "";
-      msg += control.errors.required ? "El campo es requerido " : " ";
-      msg += control.errors.email ? "El campo debe ser un email " : " ";
-      msg += control.errors.minlength
-        ? `El campo debe tener al menos ${control.errors.minlength.requiredLength} caracteres `
-        : " ";
+      msg += errors.required ? "El campo es requerido " : " ";
+      msg += errors.email ? "El campo debe ser un email " : " ";
+      msg += errors.minlength ? `El campo debe tener al menos ${errors.minlength.requiredLength} caracteres ` : " ";
+      msg += errors.maxlength ? `El campo no debe tener más de ${errors.maxlength.requiredLength} caracteres ` : " ";
+      msg += errors.min ? `El campo debe ser mayor que ${errors.min.min} ` : " ";
+      msg += errors.max ? `El campo debe ser menor que ${errors.max.max} ` : " ";
       return msg;
     }
     return "";
