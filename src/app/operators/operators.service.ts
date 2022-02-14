@@ -12,7 +12,9 @@ export class OperatorsService {
   public getOperators(): Operator[] {
     return this.operators;
   }
-
+  public getOperatorById(id: string): Operator {
+    return this.operators.find((o) => o.id === id);
+  }
   public getOperatorClass(operator: Operator): string {
     const active = OperatorStatus[OperatorStatus.ACTIVE];
     return operator.status.toString() == active ? "active" : "pending";
