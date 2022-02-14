@@ -25,15 +25,15 @@
 - [x] Página Operators (/operators)
 - [x] Página Operator con detalles de un operador (/operators/:id)
 - [x] Página Trip con detalles de un viaje (/trips/:id)
-- [ ] Página Booking con formulario para reservar (/trips/:id/booking)
+- [x] Página Booking con formulario para reservar (/trips/:id/booking)
 
 ## 3. Formularios
 
 - [x] Formulario de login
 - [x] Formulario de contacto
 - [x] Validaciones
-- [ ] Formulario de alta de reserva básico
-- [ ] Formulario de alta de reserva con extras
+- [x] Formulario de alta de reserva básico
+- [x] Formulario de alta de reserva con extras
 
 ## 4. Servicios
 
