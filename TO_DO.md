@@ -37,6 +37,7 @@
 
 ## 4. Servicios
 
+- [ ] Crear un servicio para las validaciones
 - [ ] Crear un servicio para los operadores
 - [ ] Crear un servicio para los viajes
 - [ ] Crear un servicio para las reservas
