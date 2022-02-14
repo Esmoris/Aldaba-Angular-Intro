@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute } from "@angular/router";
+import { BookingStatus } from "src/app/models/booking";
 
 @Component({
   selector: "app-new-booking",
@@ -9,13 +10,15 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class NewBookingComponent implements OnInit {
   public form: FormGroup;
-
+  public bookingStatusKeys = Object.keys(BookingStatus);
+  public bookingStatus = BookingStatus;
   constructor(route: ActivatedRoute, formBuilder: FormBuilder) {
     const tripId = route.snapshot.paramMap.get("id");
     this.form = formBuilder.group({
       tripId: new FormControl(tripId, Validators.required),
       travelerId: new FormControl("", [Validators.required, Validators.email]),
       passengersCount: new FormControl(1, [Validators.required, Validators.min(1), Validators.max(6)]),
+      status: new FormControl("REQUESTED"),
     });
   }
 

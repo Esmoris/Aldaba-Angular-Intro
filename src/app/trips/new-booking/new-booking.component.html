@@ -27,6 +27,18 @@
            [attr.aria-invalid]="hasError('passengersCount')">
     <small *ngIf="hasError('passengersCount')">{{ getError('passengersCount') }}</small>
   </div>
+  <div>
+    <label for="status"> <small *ngIf="hasError('status')">*</small> Estado de la reserva </label>
+    <select type="number"
+            name="status"
+            formControlName="status"
+            [attr.aria-invalid]="hasError('status')">
+      <option *ngFor="let key of bookingStatusKeys"
+              [value]="key"
+              [label]="bookingStatus[key]"></option>
+    </select>
+    <small *ngIf="hasError('status')">{{ getError('status') }}</small>
+  </div>
   <button type="submit"
           (click)="onSubmitClick()"
           [disabled]="form.invalid"> Enviar </button>
