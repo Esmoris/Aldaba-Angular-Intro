@@ -2,16 +2,14 @@
 
 <form [formGroup]="form">
   <div>
-    <label for="tripId"> <small *ngIf="hasError('tripId')">*</small> Trip Id </label>
+    <label for="tripId"> Tu viaje </label>
     <input readonly
            type="string"
            name="tripId"
-           formControlName="tripId"
-           [attr.aria-invalid]="hasError('tripId')">
-    <small *ngIf="hasErrorMessage('tripId')">{{ getError('tripId') }}</small>
+           formControlName="tripId">
   </div>
   <div>
-    <label for="travelerId"> <small *ngIf="hasError('travelerId')">*</small> Traveler email </label>
+    <label for="travelerId"> <small *ngIf="hasError('travelerId')">*</small> Tu email </label>
     <input type="email"
            name="travelerId"
            formControlName="travelerId"
@@ -19,8 +17,8 @@
     <small *ngIf="hasErrorMessage('travelerId')">{{ getError('travelerId') }}</small>
   </div>
   <div>
-    <label for="passengersCount"> <small *ngIf="hasError('passengersCount')">*</small> Number of
-      passengers </label>
+    <label for="passengersCount"> <small *ngIf="hasError('passengersCount')">*</small> Número de
+      pasajeros </label>
     <input type="number"
            name="passengersCount"
            formControlName="passengersCount"
@@ -28,16 +26,13 @@
     <small *ngIf="hasError('passengersCount')">{{ getError('passengersCount') }}</small>
   </div>
   <div>
-    <label for="status"> <small *ngIf="hasError('status')">*</small> Estado de la reserva </label>
-    <select type="number"
-            name="status"
-            formControlName="status"
-            [attr.aria-invalid]="hasError('status')">
+    <label for="status"> Estado de la reserva </label>
+    <select name="status"
+            formControlName="status">
       <option *ngFor="let key of bookingStatusKeys"
               [value]="key"
               [label]="bookingStatus[key]"></option>
     </select>
-    <small *ngIf="hasError('status')">{{ getError('status') }}</small>
   </div>
   <div>
     <label for="hasPremiumFoods"> ¿Quieres comida premium? </label>

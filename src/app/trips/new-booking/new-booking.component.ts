@@ -12,8 +12,10 @@ export class NewBookingComponent implements OnInit {
   public form: FormGroup;
   public bookingStatusKeys = Object.keys(BookingStatus);
   public bookingStatus = BookingStatus;
+
   constructor(route: ActivatedRoute, formBuilder: FormBuilder) {
     const tripId = route.snapshot.paramMap.get("id");
+
     this.form = formBuilder.group({
       tripId: new FormControl(tripId, Validators.required),
       travelerId: new FormControl("", [Validators.required, Validators.email]),
