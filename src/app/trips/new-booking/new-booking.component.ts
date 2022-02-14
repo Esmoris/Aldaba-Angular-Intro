@@ -19,6 +19,7 @@ export class NewBookingComponent implements OnInit {
       travelerId: new FormControl("", [Validators.required, Validators.email]),
       passengersCount: new FormControl(1, [Validators.required, Validators.min(1), Validators.max(6)]),
       status: new FormControl("REQUESTED"),
+      hasPremiumFoods: new FormControl(false),
     });
   }
 

@@ -39,6 +39,12 @@
     </select>
     <small *ngIf="hasError('status')">{{ getError('status') }}</small>
   </div>
+  <div>
+    <label for="hasPremiumFoods"> Include premium foods ? </label>
+    <input type="checkbox"
+           name="hasPremiumFoods"
+           formControlName="hasPremiumFoods">
+  </div>
   <button type="submit"
           (click)="onSubmitClick()"
           [disabled]="form.invalid"> Enviar </button>
