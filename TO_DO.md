@@ -42,3 +42,12 @@
 - [x] Crear un servicio para los viajes
 - [ ] Crear un servicio para las reservas
 - [ ] Actualizar las plazas disponibles de los viajes
+
+## 5. Servicios REST
+
+- [ ] Obtener la lista de operadores
+- [ ] Obtener la lista de viajes
+- [ ] Obtener un operador
+- [ ] Obtener un viaje
+- [ ] Crear una reserva
+- [ ] Enviar credenciales de login
