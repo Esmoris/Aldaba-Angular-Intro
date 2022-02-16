@@ -48,7 +48,7 @@
 ## 5. Servicios REST
 
 - [x] Obtener la lista de viajes
-- [ ] Obtener la lista de operadores
+- [x] Obtener la lista de operadores con pipe async
 - [ ] Obtener un operador
 - [ ] Obtener un viaje
 - [ ] Crear una reserva

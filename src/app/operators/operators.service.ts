@@ -1,4 +1,6 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { OPERATORS } from "../data/astro_bookings";
 import { Operator, OperatorRanges, OperatorStatus } from "../models/operator";
 
@@ -7,10 +9,14 @@ import { Operator, OperatorRanges, OperatorStatus } from "../models/operator";
 })
 export class OperatorsService {
   private operators: Operator[] = OPERATORS;
-  constructor() {}
+
+  constructor(private httpClient: HttpClient) {}
 
   public getOperators(): Operator[] {
     return this.operators;
+  }
+  public getOperators$(): Observable<Operator[]> {
+    return this.httpClient.get<Operator[]>("http://localhost:3000/operators");
   }
   public getOperatorById(id: string): Operator {
     return this.operators.find((o) => o.id === id);
