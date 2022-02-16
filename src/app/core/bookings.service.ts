@@ -5,11 +5,13 @@ import { Booking } from "../models/booking";
   providedIn: "root",
 })
 export class BookingsService {
-  public bookings: Booking[] =  [];
+  public bookings: Booking[] = [];
+
   constructor() {}
 
   public postBooking(booking: Booking) {
-    console.log(booking);
+    console.log({ reserva: booking });
     this.bookings.push(booking);
+    console.log({ lista: this.bookings });
   }
 }

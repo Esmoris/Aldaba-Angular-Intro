@@ -12,9 +12,11 @@ export class HomeComponent implements OnInit {
   public trips: Trip[];
   public bookingsCount : Number =0;
 
-  constructor(private tripsService: TripsService, private bookingService: BookingsService) {
-    this.bookingsCount = this.bookingService.bookings.length;
-    this.trips = this.tripsService.getTrips();
+
+  constructor(private tripsService: TripsService, private bookingsService: BookingsService) {
+    this.bookingsCount = this.bookingsService.bookings.length;
+    // this.trips = this.tripsService.getTrips();
+    this.tripsService.getTrips$().subscribe((trips) => (this.trips = trips));
   }
 
   ngOnInit(): void {}
