@@ -11,6 +11,42 @@
       "refund_id": "",
       "operator_reserve_code": "m-1",
       "status": "RESERVED"
+    },
+    {
+      "tripId": "space-y-moon-1",
+      "travelerId": "alberto@aldaba.com",
+      "passengersCount": 1,
+      "status": "REQUESTED",
+      "hasPremiumFoods": false,
+      "paymentId": null,
+      "id": "sh0PW5g"
+    },
+    {
+      "tripId": "space-y-moon-1",
+      "travelerId": "alberto@aldaba.com",
+      "passengersCount": 1,
+      "status": "REQUESTED",
+      "hasPremiumFoods": false,
+      "paymentId": null,
+      "id": "y82f2d8"
+    },
+    {
+      "tripId": "space-y-mars-2",
+      "travelerId": "alberto@aldaba.com",
+      "passengersCount": 6,
+      "status": "RESERVED",
+      "hasPremiumFoods": true,
+      "paymentId": "payPal",
+      "id": "d_UDC9H"
+    },
+    {
+      "tripId": "green-origin-iss-4",
+      "travelerId": "alberto@aldaba.com",
+      "passengersCount": 3,
+      "status": "PAID",
+      "hasPremiumFoods": false,
+      "paymentId": "creditCard",
+      "id": "LjGTyzI"
     }
   ],
   "operators": [

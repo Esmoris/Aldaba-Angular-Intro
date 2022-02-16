@@ -47,6 +47,7 @@ export class NewBookingComponent implements OnInit {
   }
 
   public onSubmitClick() {
-    this.bookingService.postBooking(this.form.value);
+    // this.bookingService.postBooking(this.form.value);
+    this.bookingService.postBooking$(this.form.value).subscribe((response) => console.log(response));
   }
 }
