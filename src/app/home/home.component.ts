@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { BookingsService } from "../core/bookings.service";
 import { Trip } from "../models/trip";
 import { TripsService } from "../trips/trips.service";
 
@@ -10,7 +11,10 @@ import { TripsService } from "../trips/trips.service";
 export class HomeComponent implements OnInit {
   public trips: Trip[];
 
-  constructor(private tripsService: TripsService) {
+  public bookingsCount: number = 0;
+
+  constructor(private tripsService: TripsService, private bookingsService: BookingsService) {
+    this.bookingsCount = this.bookingsService.bookings.length;
     this.trips = this.tripsService.getTrips();
   }
 
