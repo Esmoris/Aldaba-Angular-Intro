@@ -47,8 +47,8 @@
 
 ## 5. Servicios REST
 
+- [x] Obtener la lista de viajes
 - [ ] Obtener la lista de operadores
-- [ ] Obtener la lista de viajes
 - [ ] Obtener un operador
 - [ ] Obtener un viaje
 - [ ] Crear una reserva

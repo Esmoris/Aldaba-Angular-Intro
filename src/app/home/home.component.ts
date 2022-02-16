@@ -15,7 +15,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private tripsService: TripsService, private bookingsService: BookingsService) {
     this.bookingsCount = this.bookingsService.bookings.length;
-    this.trips = this.tripsService.getTrips();
+    // this.trips = this.tripsService.getTrips();
+    this.tripsService.getTrips$().subscribe((trips) => (this.trips = trips));
   }
 
   ngOnInit(): void {}
