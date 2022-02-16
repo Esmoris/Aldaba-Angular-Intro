@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormControl, FormGroup, Validators } from "@angular/forms";
 import { ActivatedRoute } from "@angular/router";
+import { BookingsService } from "src/app/core/bookings.service";
 import { BookingStatus } from "src/app/models/booking";
 import { ValidationsService } from "src/app/validations.service";
 
@@ -14,7 +15,12 @@ export class NewBookingComponent implements OnInit {
   public bookingStatusKeys = Object.keys(BookingStatus);
   public bookingStatus = BookingStatus;
 
-  constructor(route: ActivatedRoute, formBuilder: FormBuilder, private validations: ValidationsService) {
+  constructor(
+    route: ActivatedRoute,
+    formBuilder: FormBuilder,
+    private validations: ValidationsService,
+    private bookingService: BookingsService,
+  ) {
     const tripId = route.snapshot.paramMap.get("id");
     this.form = formBuilder.group({
       tripId: new FormControl(tripId, Validators.required),
@@ -41,6 +47,6 @@ export class NewBookingComponent implements OnInit {
   }
 
   public onSubmitClick() {
-    console.log(this.form.value);
+    this.bookingService.postBooking(this.form.value);
   }
 }

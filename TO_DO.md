@@ -40,7 +40,7 @@
 - [x] Crear un servicio para las validaciones
 - [x] Crear un servicio para los operadores
 - [x] Crear un servicio para los viajes
-- [ ] Crear un módulo para servicios Core
+- [x] Crear un módulo para servicios Core
 - [ ] Crear un servicio para las reservas
 - [ ] Actualizar las plazas disponibles de los viajes
 
