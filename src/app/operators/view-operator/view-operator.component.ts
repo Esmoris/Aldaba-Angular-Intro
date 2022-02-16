@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { OPERATORS } from "src/app/data/astro_bookings";
 import { Operator } from "src/app/models/operator";
+import { OperatorsService } from "../operators.service";
 
 @Component({
   selector: "app-view-operator",
@@ -11,10 +11,9 @@ import { Operator } from "src/app/models/operator";
 export class ViewOperatorComponent implements OnInit {
   public operator: Operator;
 
-  constructor(route: ActivatedRoute) {
+  constructor(route: ActivatedRoute, operatorsService: OperatorsService) {
     const operatorId = route.snapshot.params["id"];
-    const operators: Operator[] = OPERATORS;
-    this.operator = operators.find((o) => o.id === operatorId);
+    this.operator = operatorsService.getOperatorById(operatorId);
   }
   ngOnInit(): void {}
 }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { TRIPS } from "../data/astro_bookings";
-import { Trip, TripKinds } from "../models/trip";
+import { Trip } from "../models/trip";
+import { TripsService } from "../trips/trips.service";
 
 @Component({
   selector: "app-home",
@@ -8,16 +8,18 @@ import { Trip, TripKinds } from "../models/trip";
   styleUrls: ["./home.component.css"],
 })
 export class HomeComponent implements OnInit {
-  public trips: Trip[] = TRIPS;
-  constructor() {}
+  public trips: Trip[];
+
+  constructor(private tripsService: TripsService) {
+    this.trips = this.tripsService.getTrips();
+  }
 
   ngOnInit(): void {}
 
   public getTripClass(trip: Trip): string {
-    const tripOnly = TripKinds[TripKinds.TRIP_ONLY];
-    return trip.kind.toString() == tripOnly ? "trip_only" : "with_stay";
+    return this.tripsService.getTripClass(trip);
   }
   public canReserveBooking(trip: Trip): boolean {
-    return trip.places > 0;
+    return this.tripsService.canReserveBooking(trip);
   }
 }

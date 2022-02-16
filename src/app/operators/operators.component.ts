@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
-import { OPERATORS } from "../data/astro_bookings";
-import { Operator, OperatorRanges, OperatorStatus } from "../models/operator";
+import { Operator } from "../models/operator";
+import { OperatorsService } from "./operators.service";
 
 @Component({
   selector: "app-operators",
@@ -8,18 +8,18 @@ import { Operator, OperatorRanges, OperatorStatus } from "../models/operator";
   styleUrls: ["./operators.component.css"],
 })
 export class OperatorsComponent implements OnInit {
-  public operators: Operator[] = OPERATORS;
+  public operators: Operator[];
 
-  constructor() {}
+  constructor(private operatorsService: OperatorsService) {
+    this.operators = this.operatorsService.getOperators();
+  }
 
   ngOnInit(): void {}
 
   public getOperatorClass(operator: Operator): string {
-    const active = OperatorStatus[OperatorStatus.ACTIVE];
-    return operator.status.toString() == active ? "active" : "pending";
+    return this.operatorsService.getOperatorClass(operator);
   }
   public getOperatorIcon(operator: Operator): string {
-    const orbital = OperatorRanges[OperatorRanges.ORBITAL];
-    return operator.range.toString() == orbital ? "🌍" : "💫";
+    return this.operatorsService.getOperatorIcon(operator);
   }
 }

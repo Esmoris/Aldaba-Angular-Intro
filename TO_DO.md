@@ -37,8 +37,18 @@
 
 ## 4. Servicios
 
-- [ ] Crear un servicio para las validaciones
-- [ ] Crear un servicio para los operadores
-- [ ] Crear un servicio para los viajes
+- [x] Crear un servicio para las validaciones
+- [x] Crear un servicio para los operadores
+- [x] Crear un servicio para los viajes
 - [ ] Crear un servicio para las reservas
 - [ ] Actualizar las plazas disponibles de los viajes
+- [ ] Crear un módulo para servicios Core
+
+## 5. Servicios REST
+
+- [ ] Obtener la lista de operadores
+- [ ] Obtener la lista de viajes
+- [ ] Obtener un operador
+- [ ] Obtener un viaje
+- [ ] Crear una reserva
+- [ ] Enviar credenciales de login
