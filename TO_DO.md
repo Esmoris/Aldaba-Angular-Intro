@@ -49,7 +49,6 @@
 
 - [x] Obtener la lista de viajes
 - [x] Obtener la lista de operadores con pipe async
-- [ ] Obtener un operador
-- [ ] Obtener un viaje
+- [x] Obtener un viaje
 - [ ] Crear una reserva
 - [ ] Enviar credenciales de login
