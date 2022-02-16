@@ -41,7 +41,8 @@
 - [x] Crear un servicio para los operadores
 - [x] Crear un servicio para los viajes
 - [x] Crear un módulo para servicios Core
-- [ ] Crear un servicio para las reservas
+- [x] Crear un servicio para las reservas
+- [x] Contador de reservas activas
 - [ ] Actualizar las plazas disponibles de los viajes
 
 ## 5. Servicios REST

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { BookingsService } from "../bookings.service";
 
 @Component({
   selector: "app-header",
@@ -7,7 +8,10 @@ import { Component, OnInit } from "@angular/core";
 })
 export class HeaderComponent implements OnInit {
   public title = "aldaba angular intro";
-  constructor() {}
+  public bookingsCount: number = 0;
+  constructor(private bookingsService: BookingsService) {
+    this.bookingsCount = this.bookingsService.bookings.length;
+  }
 
   ngOnInit(): void {}
 }

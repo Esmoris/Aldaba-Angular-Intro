@@ -10,7 +10,8 @@ export class BookingsService {
   constructor() {}
 
   public postBooking(booking: Booking) {
-    console.log(booking);
+    console.log({ reserva: booking });
     this.bookings.push(booking);
+    console.log({ lista: this.bookings });
   }
 }
