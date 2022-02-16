@@ -4,13 +4,12 @@ import { AboutModule } from "./about/about.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { ContactModule } from "./contact/contact.module";
-import { FooterComponent } from "./footer/footer.component";
-import { HeaderComponent } from "./header/header.component";
+import { CoreModule } from "./core/core.module";
 import { HomeComponent } from "./home/home.component";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, HomeComponent],
-  imports: [BrowserModule, AppRoutingModule, AboutModule, ContactModule],
+  declarations: [AppComponent, HomeComponent],
+  imports: [BrowserModule, AppRoutingModule, AboutModule, ContactModule, CoreModule],
   providers: [],
   bootstrap: [AppComponent],
 })
