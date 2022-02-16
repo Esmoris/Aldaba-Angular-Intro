@@ -1,4 +1,10 @@
-<h1> {{ operator.name }} </h1>
-<p>{{ operator.range }}</p>
-<p>{{ operator.status }}</p>
-<a [routerLink]="['/operators']">Volver a operadores</a>
+<article *ngIf="operator$ | async as operator">
+  <header>
+    <h1> {{ operator.name }} </h1>
+  </header>
+  <main>
+    <p>{{ operator.range }}</p>
+    <p>{{ operator.status }}</p>
+  </main>
+  <footer><a [routerLink]="['/operators']">Volver a operadores</a></footer>
+</article>
