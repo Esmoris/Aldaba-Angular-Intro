@@ -42,6 +42,7 @@
 - [x] Crear un servicio para los viajes
 - [ ] Crear un servicio para las reservas
 - [ ] Actualizar las plazas disponibles de los viajes
+- [ ] Crear un módulo para servicios Core
 
 ## 5. Servicios REST
 
