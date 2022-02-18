@@ -1,5 +1,14 @@
 <h1>Bienvenido a Aldaba Astro Bookings</h1>
 
+<form>
+  <input type="text"
+         name="destination"
+         [(ngModel)]="destination">
+  <input type="button"
+         value="🔎"
+         (click)="searchTrips()">
+</form>
+
 <h3>Hay {{ bookingsCount }} reservas activas </h3>
 
 <h2>Tenemos {{ trips.length }} vuelos espaciales</h2>
