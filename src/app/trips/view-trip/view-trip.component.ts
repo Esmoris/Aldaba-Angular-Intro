@@ -13,9 +13,13 @@ export class ViewTripComponent implements OnInit {
   // public trip: Trip;
   public trip$: Observable<Trip>;
   constructor(route: ActivatedRoute, tripsService: TripsService) {
-    const tripId = route.snapshot.params["id"];
+    // const tripId = route.snapshot.params["id"];
     // this.trip = tripsService.getTripById(tripId);
-    this.trip$ = tripsService.getTripById$(tripId);
+
+    route.params.subscribe((params) => {
+      const tripId = params["id"];
+      this.trip$ = tripsService.getTripById$(tripId);
+    });
   }
 
   ngOnInit(): void {}
