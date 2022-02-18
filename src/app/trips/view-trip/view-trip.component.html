@@ -1,16 +1,22 @@
-<h1> {{ trip.destination }} </h1>
-<p>
-  Operated by: <a [routerLink]="['/operators',trip.operatorId]"> {{ trip.operatorId }}</a>
-</p>
-<p>
-  From: {{ trip.startDate | date:'dd-MMM-yyyy' }}
-</p>
-<p>
-  To: {{ trip.endDate | date:'dd-MMM-yyyy' }}
-</p>
-<p>
-  For: {{ trip.flightPrice | currency:'EUR':'symbol':'3.0' }}
-</p>
-
-
-<a [routerLink]="['/']">Volver a home</a>
+<article *ngIf="trip$ | async as trip">
+  <header>
+    <h1> {{ trip.destination }} </h1>
+  </header>
+  <main>
+    <p>
+      Operated by: <a [routerLink]="['/operators',trip.operatorId]"> {{ trip.operatorId }}</a>
+    </p>
+    <p>
+      From: {{ trip.startDate | date:'dd-MMM-yyyy' }}
+    </p>
+    <p>
+      To: {{ trip.endDate | date:'dd-MMM-yyyy' }}
+    </p>
+    <p>
+      For: {{ trip.flightPrice | currency:'EUR':'symbol':'3.0' }}
+    </p>
+  </main>
+  <footer>
+    <a [routerLink]="['/']">Volver a home</a>
+  </footer>
+</article>

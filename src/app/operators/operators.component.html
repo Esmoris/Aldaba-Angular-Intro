@@ -1,5 +1,5 @@
-<h1>Tenemos {{ operators.length }} operadores espaciales</h1>
-<ul>
+<ul *ngIf="operators$ | async as operators">
+  <h1>Tenemos {{ operators.length }} operadores espaciales</h1>
   <li *ngFor="let operator of operators"
       [class]="getOperatorClass(operator) ">
 

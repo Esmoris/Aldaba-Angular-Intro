@@ -48,8 +48,17 @@
 ## 5. Servicios REST
 
 - [x] Obtener la lista de viajes
-- [ ] Obtener la lista de operadores
-- [ ] Obtener un operador
-- [ ] Obtener un viaje
-- [ ] Crear una reserva
+- [x] Obtener la lista de operadores con pipe async
+- [x] Obtener un viaje
+- [x] Obtener un operador
+- [x] Crear una reserva
 - [ ] Enviar credenciales de login
+
+## 6. Comunicaciones asíncronas con RxJS
+
+- [ ] Filtrar los viajes por destino
+- [ ] Filtrar los operadores por rango
+- [ ] Mostrar la duración del viaje en días
+- [ ] Si la reserva no se ha pagado, mostrar un texto de advertencia
+- [ ] Actualizar usuario después de login
+- [ ] Actualizar un contador de reservas activas en la cabecera

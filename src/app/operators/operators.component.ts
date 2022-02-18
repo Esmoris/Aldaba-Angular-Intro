@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Observable } from "rxjs";
 import { Operator } from "../models/operator";
 import { OperatorsService } from "./operators.service";
 
@@ -8,10 +9,12 @@ import { OperatorsService } from "./operators.service";
   styleUrls: ["./operators.component.css"],
 })
 export class OperatorsComponent implements OnInit {
-  public operators: Operator[];
+  //public operators: Operator[];
+  public operators$: Observable<Operator[]>;
 
   constructor(private operatorsService: OperatorsService) {
-    this.operators = this.operatorsService.getOperators();
+    //this.operators = this.operatorsService.getOperators();
+    this.operators$ = this.operatorsService.getOperators$();
   }
 
   ngOnInit(): void {}
