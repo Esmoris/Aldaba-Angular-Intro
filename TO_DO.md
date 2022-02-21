@@ -57,8 +57,13 @@
 ## 6. Comunicaciones asíncronas con RxJS
 
 - [x] Filtrar los viajes por destino
-- [ ] Filtrar los operadores por rango
-- [ ] Mostrar la duración del viaje en días
-- [ ] Si la reserva no se ha pagado, mostrar un texto de advertencia
+- [x] Filtrar los operadores por rango
 - [ ] Actualizar usuario después de login
 - [ ] Actualizar un contador de reservas activas en la cabecera
+
+## 7. Componentes controladores y presentadores
+
+- [ ] Lista de operadores en un presentador independiente
+- [ ] Lista de viajes en un presentador independiente
+- [ ] Mostrar la duración del viaje en días
+- [ ] Si la reserva no se ha pagado, mostrar un texto de advertencia
